@@ -29,6 +29,7 @@ public class PageEventService {
         System.out.println("************************************");
         };
     }
+    @Bean
     public Supplier<PageEvent> pageEventSupplier(){
 
         return () ->  new PageEvent(
