@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 import java.util.Date;
 import java.util.Random;
 import java.util.function.Consumer;
+import java.util.function.Function;
 import java.util.function.Supplier;
 
 import static org.springframework.integration.graph.LinkNode.Type.input;
@@ -38,8 +39,7 @@ public class PageEventService {
                 new Date(),
                 new Random().nextInt(9000));
     }
-
-        @Bean
+    @Bean
     public Function<PageEvent,PageEvent> pageEventFunction(){
 
         return (input) -> {
