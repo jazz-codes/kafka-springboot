@@ -39,5 +39,16 @@ public class PageEventService {
                 new Random().nextInt(9000));
     }
 
+        @Bean
+    public Function<PageEvent,PageEvent> pageEventFunction(){
+
+        return (input) -> {
+            input.setName("L:"+input.getName().length());
+            input.setUser("UUUUU");
+            return input;
+        };
+    }
+
+
 }
 
